@@ -1,0 +1,14 @@
+D:\Divami_Traning\.Net_Practice\task1\myfirst\bin\Debug\net10.0\myfirst.exe
+D:\Divami_Traning\.Net_Practice\task1\myfirst\bin\Debug\net10.0\myfirst.deps.json
+D:\Divami_Traning\.Net_Practice\task1\myfirst\bin\Debug\net10.0\myfirst.runtimeconfig.json
+D:\Divami_Traning\.Net_Practice\task1\myfirst\bin\Debug\net10.0\myfirst.dll
+D:\Divami_Traning\.Net_Practice\task1\myfirst\bin\Debug\net10.0\myfirst.pdb
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.GeneratedMSBuildEditorConfig.editorconfig
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.AssemblyInfoInputs.cache
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.AssemblyInfo.cs
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.csproj.CoreCompileInputs.cache
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.dll
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\refint\myfirst.dll
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.pdb
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\myfirst.genruntimeconfig.cache
+D:\Divami_Traning\.Net_Practice\task1\myfirst\obj\Debug\net10.0\ref\myfirst.dll
