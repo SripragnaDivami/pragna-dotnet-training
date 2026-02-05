@@ -1,0 +1,6 @@
+@BackendApicalls_HostAddress = http://localhost:5126
+
+GET {{BackendApicalls_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
