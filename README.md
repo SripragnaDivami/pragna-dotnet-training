@@ -52,13 +52,6 @@ cd task2
 
 Update the connection string in `appsettings.json`:
 
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Database=EmployeeDB;Username=YOUR_USERNAME;Password=YOUR_PASSWORD"
-  }
-}
-```
 
 ### 3. Create Database
 
