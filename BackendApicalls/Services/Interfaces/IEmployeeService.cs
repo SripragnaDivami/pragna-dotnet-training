@@ -1,8 +1,9 @@
 namespace BackendApicalls.Services.Interfaces
 {
-    using BackendApicalls.Models.entities;
+    using BackendApicalls.Models.DTOs;
+   
     public interface IEmployeeService
     {
-        Task<List<Employee>> GetAllEmployeesAsync();
+        Task<List<EmployeeDTO>> GetAllEmployeesAsync();
     }
 }
