@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS policy (
+    id SERIAL PRIMARY KEY,
+    policy_code VARCHAR(50) NOT NULL UNIQUE,
+    policy_name VARCHAR(150) NOT NULL,
+    description TEXT,
+    premium_amount NUMERIC(10,2) NOT NULL CHECK (premium_amount > 0),
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
