@@ -53,4 +53,5 @@ bld/
 .env.production.local
 appsettings.Development.json
 appsettings.Production.json
+appsettings.json
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("capstone_policy_management")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28cd62648bd9a57ecac937f5bb7b075bca61e6f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78d36596741bd3b904a53114e22af45d3f7a3556")]
 [assembly: System.Reflection.AssemblyProductAttribute("capstone_policy_management")]
 [assembly: System.Reflection.AssemblyTitleAttribute("capstone_policy_management")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
