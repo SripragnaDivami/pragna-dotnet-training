@@ -11,7 +11,7 @@ namespace capstone_policy_management.Controllers;
 [ApiController]
 [ServiceFilter(typeof(GlobalResponseFilter))]
 [Route("api/users")]
-[Authorize(Roles = "User")]
+[Authorize]
 public class UserController : ControllerBase
 {
     private readonly IUserService userService;
@@ -41,6 +41,7 @@ public class UserController : ControllerBase
         return Ok(user);
     }
 
+    [Authorize(Roles = "User")]
     [HttpPost(Name = "CreateUser")]
     public async Task<ActionResult<UserResponseDto>> CreateUser([FromBody] UserCreateDto userDto)
     {
@@ -53,6 +54,7 @@ public class UserController : ControllerBase
         return CreatedAtAction(nameof(GetUserById), new { id = createdUser.Id }, createdUser);
     }
 
+    [Authorize(Roles = "User")]
     [HttpPut("{id}", Name = "UpdateUser")]
     public async Task<ActionResult<UserResponseDto>> UpdateUser(int id, [FromBody] UserUpdateDto userDto)
     {
@@ -70,6 +72,7 @@ public class UserController : ControllerBase
         return Ok(updatedUser);
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}", Name = "DeleteUser")]
     public async Task<IActionResult> DeleteUser(int id)
     {
@@ -83,6 +86,7 @@ public class UserController : ControllerBase
         return Ok(new { message = "User deleted successfully." });
     }
 
+    [Authorize(Roles = "User")]
     [HttpGet("my/enrollments", Name = "GetMyEnrollments")]
     public async Task<ActionResult<List<PolicyEnrollmentResponseDto>>> GetMyEnrollments([FromQuery] int userId)
     {
