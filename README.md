@@ -181,61 +181,10 @@ All subsequent requests will include the authorization header.
 
 **Note**: New registrations automatically receive the "User" role. Admin users must be created directly in the database.
 
-## Project Structure
-
-```
-
-capstone_policy_management/
-├── Controllers/ # API Controllers
-│ ├── AuthContoller.cs
-│ ├── PolicyController.cs
-│ ├── AdminPolicyController.cs
-│ ├── AdminEnrollmentController.cs
-│ └── UserController.cs
-├── Data/ # Database Context
-│ └── DbContext.cs
-├── DTOs/ # Data Transfer Objects
-│ ├── AuthDTOs/
-│ ├── PolicyDTOs/
-│ ├── PolicyEnrollmentDTOs/
-│ └── UserDTOs/
-├── Entities/ # Database Models
-│ ├── User.cs
-│ ├── Policy.cs
-│ └── PolicyEnrollment.cs
-├── Filters/ # Global Filters
-│ ├── GlobalExceptionFilter.cs
-│ ├── GlobalResponseFilter.cs
-│ └── PerformanceActionFilter.cs
-├── Helper/ # Utility Classes
-│ └── GenerateJWTToken.cs
-│ 
-├── Repository/ # Data Access Layer
-│ ├── Interfaces/
-│ └── Implementations/
-├── Services/ # Business Logic Layer
-│ ├── Interfaces/
-│ └── Implementations/
-├── Scripts/ # SQL Scripts
-│ ├── User.sql
-│ ├── Policy.sql
-│ └── PolicyEnrollment.sql
-├── appsettings.json # Configuration
-└── Program.cs # Application Entry Point
-
-````
-
 ##  Error Handling
 
 The API uses a global exception filter that returns standardized error responses:
 
-```json
-{
-  "errorCode": "BadRequest",
-  "message": "Detailed error message",
-  "traceId": "unique-trace-id"
-}
-````
 
 HTTP Status Codes:
 
