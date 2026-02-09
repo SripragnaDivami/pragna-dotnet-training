@@ -9,7 +9,7 @@ namespace capstone_policy_management.Controllers
 {
         [ApiController]
         [Route("api/policies")]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin,User")]
         [ServiceFilter(typeof(GlobalResponseFilter))]
          [ServiceFilter(typeof(PerformanceActionFilter))]
         public class PolicyController : ControllerBase
@@ -21,7 +21,8 @@ namespace capstone_policy_management.Controllers
             {
                 this.policyService = _policyService;
             }
-
+            
+          
             [HttpGet (Name = "GetPolicies")]
             public async Task<IActionResult> GetPolicies()
             {
