@@ -9,7 +9,7 @@ namespace capstone_policy_management.Controllers;
 [ApiController]
 [ServiceFilter(typeof(GlobalResponseFilter))]
 [Route("api/policy-enrollments")]
-[Authorize(Roles = "User")]
+[Authorize(Roles = "Admin")]
 public class PolicyEnrollmentController : ControllerBase
 {
     private readonly IPolicyEnrollmentService policyEnrollmentService;

@@ -1,4 +1,5 @@
 
+using capstone_policy_management.DTOs.PolicyEnrollmentDTOs;
 using capstone_policy_management.Filters;
 using capstone_policy_management.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -14,6 +15,8 @@ namespace capstone_policy_management.Controllers
         public class PolicyController : ControllerBase
         {
             private readonly IPolicyService policyService;
+           
+
             public PolicyController(IPolicyService _policyService)
             {
                 this.policyService = _policyService;
@@ -24,6 +27,10 @@ namespace capstone_policy_management.Controllers
             {
                 // Return only active policies
                 var policies = await policyService.GetPoliciesByStatusAsync(true);
+                if (policies == null || !policies.Any())
+                {
+                    return NotFound(new { message = "No active policies found." });
+                }
                 return Ok(policies);
             }
 

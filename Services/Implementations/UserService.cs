@@ -39,7 +39,7 @@ public class UserService : IUserService
             Name = userDto.Name,
             Email = userDto.Email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
-            Role = userDto.Role,
+            Role = "User",
             CreatedAt = DateTime.UtcNow
         };
 
@@ -63,9 +63,6 @@ public class UserService : IUserService
 
         if (!string.IsNullOrEmpty(userDto.Password))
             existingUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
-
-        if (!string.IsNullOrEmpty(userDto.Role))
-            existingUser.Role = userDto.Role;
 
         var updatedUser = await userRepository.UpdateUserAsync(existingUser);
         return MapToResponseDto(updatedUser);

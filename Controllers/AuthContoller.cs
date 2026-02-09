@@ -1,4 +1,5 @@
 using capstone_policy_management.DTOs;
+using capstone_policy_management.DTOs.AuthDTOs;
 using capstone_policy_management.Filters;
 using capstone_policy_management.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;

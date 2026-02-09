@@ -1,4 +1,5 @@
 using capstone_policy_management.DTOs;
+using capstone_policy_management.DTOs.AuthDTOs;
 
 namespace capstone_policy_management.Services.Interfaces;
 

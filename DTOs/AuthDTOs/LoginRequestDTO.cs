@@ -1,7 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace capstone_policy_management.DTOs;
+namespace capstone_policy_management.DTOs.AuthDTOs;
 
 public class LoginRequestDTO
 {

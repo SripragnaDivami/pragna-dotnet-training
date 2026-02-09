@@ -12,6 +12,7 @@ namespace capstone_policy_management.Repository.Interfaces
         Task<PolicyEnrollment?> ApproveEnrollmentAsync(int id);
         Task<PolicyEnrollment?> RejectEnrollmentAsync(int id);
         Task<List<PolicyEnrollment>> GetEnrollmentsByStatusAsync(string status);
+        Task<PolicyEnrollment?> GetEnrollmentByUserAndPolicyAsync(int userId, int policyId);
         
         Task DeleteEnrollmentAsync(int id);
     }

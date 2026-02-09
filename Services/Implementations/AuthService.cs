@@ -1,5 +1,6 @@
 
 using capstone_policy_management.DTOs;
+using capstone_policy_management.DTOs.AuthDTOs;
 using capstone_policy_management.Entities;
 using capstone_policy_management.Helper;
 using capstone_policy_management.Repository.Interfaces;

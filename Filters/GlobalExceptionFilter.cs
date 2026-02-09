@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
-using capstone_policy_management.Exceptions;
 
 namespace capstone_policy_management.Filters;
 
@@ -25,12 +24,6 @@ public class GlobalExceptionFilter : IExceptionFilter
         {
             statusCode = HttpStatusCode.Unauthorized;
             errorCode = "UNAUTHORIZED";
-            message = context.Exception.Message;
-        }
-        else if (context.Exception is ForbiddenAccessException)
-        {
-            statusCode = HttpStatusCode.Forbidden;
-            errorCode = "FORBIDDEN";
             message = context.Exception.Message;
         }
         else if (context.Exception is InvalidOperationException)

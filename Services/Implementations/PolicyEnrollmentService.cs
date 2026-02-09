@@ -77,6 +77,16 @@ public class PolicyEnrollmentService : IPolicyEnrollmentService
 
     public async Task<PolicyEnrollmentResponseDto> CreateEnrollmentAsync(PolicyEnrollmentCreateDto enrollmentDto)
     {
+        // Check if user already enrolled in this policy
+        var existingEnrollment = await enrollmentRepository.GetEnrollmentByUserAndPolicyAsync(
+            enrollmentDto.UserId, 
+            enrollmentDto.PolicyId);
+        
+        if (existingEnrollment != null)
+        {
+            throw new InvalidOperationException("You are already enrolled in this policy");
+        }
+
         var enrollment = new PolicyEnrollment
         {
             UserId = enrollmentDto.UserId,

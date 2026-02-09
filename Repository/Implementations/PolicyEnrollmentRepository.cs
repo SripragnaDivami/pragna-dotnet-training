@@ -59,6 +59,15 @@ public class PolicyEnrollmentRepository : IPolicyEnrollmentRepository
         return (await GetEnrollmentByIdAsync(enrollment.Id))!;
     }
 
+    
+    public async Task<PolicyEnrollment?> GetEnrollmentByUserAndPolicyAsync(int userId, int policyId)
+    {
+        return await dbContext.Set<PolicyEnrollment>()
+            .Include(e => e.User)
+            .Include(e => e.Policy)
+            .FirstOrDefaultAsync(e => e.UserId == userId && e.PolicyId == policyId);
+    }
+
     public async Task DeleteEnrollmentAsync(int id)
     {
         var enrollment = await dbContext.Set<PolicyEnrollment>().FindAsync(id);
