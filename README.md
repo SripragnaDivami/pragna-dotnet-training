@@ -209,8 +209,7 @@ capstone_policy_management/
 │ └── PerformanceActionFilter.cs
 ├── Helper/ # Utility Classes
 │ └── GenerateJWTToken.cs
-├── Mappings/ # AutoMapper Profiles
-│ └── MappingProfile.cs
+│ 
 ├── Repository/ # Data Access Layer
 │ ├── Interfaces/
 │ └── Implementations/
